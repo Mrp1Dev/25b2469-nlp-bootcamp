@@ -1,0 +1,8 @@
+{
+  "hybrid_method": "Min-Max Normalization (Dense weight=0.70, BM25 weight=0.30)",
+  "reranker_model": "Alibaba-NLP/gte-reranker-modernbert-base",
+  "rerank_top_k": 15,
+  "val_ndcg10_hybrid": 0.9017,
+  "val_ndcg10_rerank": 0.9299,
+  "rerank_query_latency_ms": 308.76
+}

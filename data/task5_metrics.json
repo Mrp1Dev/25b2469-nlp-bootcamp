@@ -1,0 +1,17 @@
+{
+  "retriever_used": "Hybrid (BGE + BM25) + Alibaba-NLP/gte-reranker-modernbert-base (post-reranked top-3)",
+  "nli_model": "tasksource/ModernBERT-base-nli",
+  "zero_shot_or_finetuned": "finetuned",
+  "val_precision": 0.6316,
+  "val_recall": 0.6774,
+  "val_f1": 0.6537,
+  "retrieval_miss_fraction": 0.0536,
+  "error_breakdown": {
+    "retrieval_miss": 3,
+    "negation": 15,
+    "numerical": 6,
+    "entity_mismatch": 12,
+    "needs_multiple_docs": 3,
+    "other": 17
+  }
+}

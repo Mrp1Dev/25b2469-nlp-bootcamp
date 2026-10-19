@@ -1,0 +1,24 @@
+# Virtual environment
+.venv/
+env/
+venv/
+
+# Caches and checkpoints
+data/cache/
+data/models/
+checkpoints/
+logs/
+__pycache__/
+*.pyc
+
+# Heavy model weights and tensors
+*.pt
+*.bin
+*.safetensors
+*.onnx
+
+# IDE and OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

@@ -1,0 +1,58 @@
+{
+  "name": "Mehraj Pranami",
+  "roll_no": "25b2469",
+  "seed": 42,
+  "gpu_used": "NVIDIA GeForce RTX 4060 Laptop GPU (8GB VRAM)",
+  "task1": {
+    "bm25_settings": "BM25Okapi(k1=1.0, b=0.5, simple_lowercase)",
+    "val_ndcg10": 0.842
+  },
+  "task2": {
+    "general_model": "BAAI/bge-base-en-v1.5",
+    "scientific_model": "pritamdeka/S-PubMedBert-MS-MARCO",
+    "val_ndcg10_general": 0.891,
+    "val_ndcg10_scientific": 0.8361,
+    "index_time_sec": {
+      "general": 64.42,
+      "scientific": 49.84
+    },
+    "query_latency_ms": {
+      "general": 3.86,
+      "scientific": 0.78
+    },
+    "memory_mb": {
+      "general": 1150.0,
+      "scientific": 1326.0
+    }
+  },
+  "task3": {
+    "hybrid_method": "Min-Max Normalization (Dense weight=0.70, BM25 weight=0.30)",
+    "reranker_model": "Alibaba-NLP/gte-reranker-modernbert-base",
+    "rerank_top_k": 15,
+    "val_ndcg10_hybrid": 0.9017,
+    "val_ndcg10_rerank": 0.9299,
+    "rerank_query_latency_ms": 308.76
+  },
+  "task4": {
+    "base_model": "BAAI/bge-base-en-v1.5",
+    "val_ndcg10_random_negatives": 0.9098,
+    "val_ndcg10_hard_negatives": 0.9285
+  },
+  "task5": {
+    "retriever_used": "Hybrid (BGE + BM25) + Alibaba-NLP/gte-reranker-modernbert-base (post-reranked top-3)",
+    "nli_model": "tasksource/ModernBERT-base-nli",
+    "zero_shot_or_finetuned": "finetuned",
+    "val_f1": 0.6537
+  },
+  "report_q1": {
+    "bm25_wins": [
+      673,
+      381
+    ],
+    "general_wins": [
+      1223,
+      1311
+    ]
+  }
+}
+
